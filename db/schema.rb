@@ -11,7 +11,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150116161443) do
+ActiveRecord::Schema.define(version: 20150125074834) do
+
+  create_table "areas", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "costs", force: :cascade do |t|
+    t.integer  "price"
+    t.string   "unit"
+    t.integer  "quantity"
+    t.integer  "user_id"
+    t.integer  "product_id"
+    t.integer  "shop_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "costs", ["product_id"], name: "index_costs_on_product_id"
+  add_index "costs", ["shop_id"], name: "index_costs_on_shop_id"
+  add_index "costs", ["user_id"], name: "index_costs_on_user_id"
+
+  create_table "products", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "shops", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "area_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "shops", ["area_id"], name: "index_shops_on_area_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
