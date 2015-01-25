@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Costs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Price</th>
+      <th>Unit</th>
+      <th>Quantity</th>
+      <th>User</th>
+      <th>Product</th>
+      <th>Shop</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @costs.each do |cost| %>
+      <tr>
+        <td><%= cost.price %></td>
+        <td><%= cost.unit %></td>
+        <td><%= cost.quantity %></td>
+        <td><%= cost.user %></td>
+        <td><%= cost.product %></td>
+        <td><%= cost.shop %></td>
+        <td><%= link_to 'Show', cost %></td>
+        <td><%= link_to 'Edit', edit_cost_path(cost) %></td>
+        <td><%= link_to 'Destroy', cost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cost', new_cost_path %>

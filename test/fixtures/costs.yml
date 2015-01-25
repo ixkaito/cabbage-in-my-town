@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  price: 1
+  unit: MyString
+  quantity: 1
+  user_id: 
+  product_id: 
+  shop_id: 
+
+two:
+  price: 1
+  unit: MyString
+  quantity: 1
+  user_id: 
+  product_id: 
+  shop_id: 
