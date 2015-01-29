@@ -14,8 +14,6 @@ Rails.application.routes.draw do
 
   devise_for :users, path: :devise_user
 
-  root to: "costs#index"
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
