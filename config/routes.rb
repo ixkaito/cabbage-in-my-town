@@ -7,9 +7,9 @@ Rails.application.routes.draw do
 
   resources :areas
 
-  #resources :users
+  resources :users
 
-  devise_for :users
+  devise_for :users, path: :devise_user
 
   root to: "costs#index"
 
