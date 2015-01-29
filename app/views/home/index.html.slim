@@ -1,0 +1,122 @@
+.row
+  .col-md-3
+    .panel.panel-default
+      .panel-heading
+        .panel-title
+          span.fa-stack.fa-lg
+            i.fa.fa-circle.fa-stack-2x
+            i.fa.fa-stack-1x.fa-inverse.fa-shopping-cart
+          | &nbsp; 商品カテゴリー
+      .list-group
+        = link_to '野菜', '#', class: 'list-group-item'
+        = link_to '野菜', '#', class: 'list-group-item'
+        = link_to '野菜', '#', class: 'list-group-item'
+        = link_to '野菜', '#', class: 'list-group-item'
+        = link_to '野菜', '#', class: 'list-group-item'
+        = link_to '野菜', '#', class: 'list-group-item'
+        = link_to '野菜', '#', class: 'list-group-item'
+      .panel-footer.text-right
+        = link_to 'すべてのカテゴリー', '#'
+  .col-md-6
+    .panel.panel-default
+      .panel-heading
+        .panel-title
+          span.fa-stack.fa-lg
+            i.fa.fa-circle.fa-stack-2x
+            i.fa.fa-stack-1x.fa-inverse
+              | 〒
+          | &nbsp; 郵便番号から探す
+      .panel-body
+        .form-group.form-inline
+          = text_field_tag '', '', class: 'form-control'
+          | &nbsp;-&nbsp;
+          = text_field_tag '', '', class: 'form-control'
+          = submit_tag '検索', class: 'btn btn-green margin-left'
+    .panel.panel-default
+      .panel-heading
+        .panel-title
+          span.fa-stack.fa-lg
+            i.fa.fa-circle.fa-stack-2x
+            i.fa.fa-stack-1x.fa-inverse.fa-map-marker
+          | &nbsp; 都道府県から探す
+      .panel-body
+        .cbg-from-prefecture
+          .cbg-from-prefecture-row
+            = link_to '北海道', '#'
+            = link_to '北海道', '#'
+            = link_to '北海道', '#'
+            = link_to '北海道', '#'
+            = link_to '北海道', '#'
+            = link_to '北海道', '#'
+          .cbg-from-prefecture-row
+            = link_to '北海道', '#'
+            = link_to '北海道', '#'
+            = link_to '北海道', '#'
+            = link_to '北海道', '#'
+            = link_to '北海道', '#'
+            = link_to '北海道', '#'
+          .cbg-from-prefecture-row
+            = link_to '北海道', '#'
+            = link_to '北海道', '#'
+            = link_to '北海道', '#'
+            = link_to '北海道', '#'
+            = link_to '北海道', '#'
+            = link_to '北海道', '#'
+          .cbg-from-prefecture-row
+            = link_to '北海道', '#'
+            = link_to '北海道', '#'
+            = link_to '北海道', '#'
+            = link_to '北海道', '#'
+            = link_to '北海道', '#'
+            = link_to '北海道', '#'
+          .cbg-from-prefecture-row
+            = link_to '北海道', '#'
+            = link_to '北海道', '#'
+            = link_to '北海道', '#'
+            = link_to '北海道', '#'
+            = link_to '北海道', '#'
+            = link_to '北海道', '#'
+          .cbg-from-prefecture-row
+            = link_to '北海道', '#'
+            = link_to '北海道', '#'
+            = link_to '北海道', '#'
+            = link_to '北海道', '#'
+            = link_to '北海道', '#'
+            = link_to '北海道', '#'
+          .cbg-from-prefecture-row
+            = link_to '北海道', '#'
+            = link_to '北海道', '#'
+            = link_to '北海道', '#'
+            = link_to '北海道', '#'
+            = link_to '北海道', '#'
+            = link_to '北海道', '#'
+          .cbg-from-prefecture-row
+            = link_to '北海道', '#'
+            = link_to '北海道', '#'
+            = link_to '北海道', '#'
+            = link_to '北海道', '#'
+            = link_to '北海道', '#'
+            span
+  .col-md-3
+    .panel.panel-default
+      .panel-heading
+        .panel-title
+          span.fa-stack.fa-lg
+            i.fa.fa-circle.fa-stack-2x
+            i.fa.fa-stack-1x.fa-inverse.fa-trophy
+          | &nbsp; 投稿ランキング
+      .list-group
+        = link_to 'Satomi Tsujita', '#', class: 'list-group-item'
+        = link_to 'Kite', '#', class: 'list-group-item'
+        = link_to 'maki', '#', class: 'list-group-item'
+        = link_to 'よしだあつし', '#', class: 'list-group-item'
+        = link_to 'ノノ', '#', class: 'list-group-item'
+        = link_to '坂本 壮礼', '#', class: 'list-group-item'
+        = link_to '中原ヤスシ', '#', class: 'list-group-item'
+        = link_to 'ekuni', '#', class: 'list-group-item'
+        = link_to 'ひがき', '#', class: 'list-group-item'
+        = link_to 'murase_syuka', '#', class: 'list-group-item'
+        = link_to 'まんたに', '#', class: 'list-group-item'
+        = link_to 'iwajun', '#', class: 'list-group-item'
+      .panel-footer.text-right
+        = link_to 'すべてのランキング', '#'
