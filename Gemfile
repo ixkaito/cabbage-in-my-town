@@ -44,3 +44,9 @@ group :development, :test do
 end
 
 gem 'devise'
+gem 'bootstrap-sass'
+gem 'font-awesome-rails'
+gem 'font-awesome-sass'
+gem 'compass'
+gem 'compass-rails'
+gem 'slim-rails'
