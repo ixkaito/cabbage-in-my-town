@@ -25,7 +25,7 @@ header.navbar.navbar-static-top.cbg-header
           = link_to destroy_user_session_path, method: :delete, class: 'btn btn-orange navbar-btn'
             i.fa.fa-sign_out
             | &nbsp; ログアウト 
-          = link_to edit_user_registration_path, method: :delete, class: 'btn btn-orange navbar-btn margin-left'
+          = link_to registration_path(current_user), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn btn-orange navbar-btn margin-left'
             i.fa.fa-user_delete
             | &nbsp; 退会 
 		- else
