@@ -181,3 +181,35 @@
 		}
 	}
 }
+
+.cbg-product-list {
+	padding: 0;
+	margin: 0 -$grid-gutter-width / 2;
+	list-style: none;
+	text-align: center;
+
+	> li {
+		width: $container-large-desktop / 6;
+		height: $container-large-desktop / 6;
+		padding: $grid-gutter-width / 2;
+		display: inline-block;
+
+		> a {
+			@include box-sizing(border-box);
+			display: block;
+			height: 100%;
+			padding-top: (($container-large-desktop / 6) - $grid-gutter-width) / 2 - ($font-size-large * $line-height-base) / 2;
+			background: #fff;
+			font-size: $font-size-large;
+			text-align: center;
+			@include border-radius($container-desktop);
+			@include box-shadow(0 2px 1px darken($border-color, 5));
+
+			&:hover {
+				background: $brand-primary;
+				color: #fff;
+				text-decoration: none;
+			}
+		}
+	}
+}
