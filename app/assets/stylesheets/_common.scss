@@ -25,7 +25,12 @@ body {
 .cbg-header {
 	background: #fff;
 	margin-bottom: $grid-gutter-width;
+	border-top: 5px solid $green;
 	@include box-shadow(0 2px 1px darken($border-color, 5));
+}
+
+.cbg-header-logo {
+	height: 30px;
 }
 
 .cbg-navbar-form {
