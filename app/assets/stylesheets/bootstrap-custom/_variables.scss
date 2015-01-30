@@ -1,3 +1,254 @@
+/*
+================================================================================
+	Cabbage
+================================================================================
+*/
+
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+
+$cloud: #eaedf1;
+$cloud-tint-10: tint($cloud, 10);
+$cloud-tint-20: tint($cloud, 20);
+$cloud-tint-30: tint($cloud, 30);
+$cloud-tint-40: tint($cloud, 40);
+$cloud-tint-50: tint($cloud, 50);
+$cloud-tint-60: tint($cloud, 60);
+$cloud-tint-70: tint($cloud, 70);
+$cloud-tint-80: tint($cloud, 80);
+$cloud-tint-90: tint($cloud, 90);
+$cloud-tint-100: tint($cloud, 100);
+
+$red: #e74c3c;
+
+$green: #1fbba6;
+
+$blue: #00afd1;
+
+$cyan: $blue;
+
+$magenta: #E91E63;
+
+$yellow: #f1c40f;
+
+$orange: #f27935;
+
+$navy: #323a45;
+$navy-tint-10: tint($navy, 10);
+$navy-tint-20: tint($navy, 20);
+$navy-tint-30: tint($navy, 30);
+$navy-tint-40: tint($navy, 40);
+$navy-tint-50: tint($navy, 50);
+
+$silver: #bdc3c7;
+
+$border-color: $cloud;
+
+$brand-primary:         $green;
+$brand-success:         $blue;
+$brand-info:            $yellow;
+$brand-warning:         $orange;
+$brand-danger:          $red;
+
+//** Global textual link color.
+$link-color:            $brand-primary;
+//** Link hover color set via `darken()` function.
+$link-hover-color:      darken($link-color, 10%);
+
+
+//== Buttons
+
+$btn-default-color:                     $navy-tint-30;
+$btn-default-bg:                        #fff !default;
+$btn-default-border:                    $border-color;
+
+$btn-red-color:                         #fff;
+$btn-red-bg:                            $red;
+$btn-red-border:                        $red;
+
+$btn-green-color:                       #fff;
+$btn-green-bg:                          $green;
+$btn-green-border:                      $green;
+
+$btn-blue-color:                        #fff;
+$btn-blue-bg:                           $blue;
+$btn-blue-border:                       $blue;
+
+$btn-cyan-color:                        #fff;
+$btn-cyan-bg:                           $cyan;
+$btn-cyan-border:                       $cyan;
+
+$btn-magenta-color:                     #fff;
+$btn-magenta-bg:                        $magenta;
+$btn-magenta-border:                    $magenta;
+
+$btn-yellow-color:                      #fff;
+$btn-yellow-bg:                         $yellow;
+$btn-yellow-border:                     $yellow;
+
+$btn-orange-color:                      #fff;
+$btn-orange-bg:                         $orange;
+$btn-orange-border:                     $orange;
+
+$btn-navy-color:                        #fff;
+$btn-navy-bg:                           $navy;
+$btn-navy-border:                       $navy;
+
+$btn-gray-color:                        #fff;
+$btn-gray-bg:                           $gray;
+$btn-gray-border:                       $gray;
+
+$btn-silver-color:                      #fff;
+$btn-silver-bg:                         $silver;
+$btn-silver-border:                     $silver;
+
+
+//== Grid system
+
+$grid-gutter-width:                     40px;
+
+
+//== Navbar
+
+$navbar-height:                         60px;
+
+
+//== Panels
+//
+//##
+
+$panel-body-padding:                    20px;
+$panel-heading-padding:                 15px 20px;
+$panel-footer-padding:                  $panel-heading-padding;
+
+//** Border color for elements within panels
+$panel-inner-border:                    $border-color;
+$panel-footer-bg:                       #fff;
+
+$panel-default-text:                    $navy-tint-30;
+$panel-default-border:                  $border-color;
+$panel-default-heading-bg:              #fff;
+
+$panel-red-text:                        #fff;
+$panel-red-border:                      transparent;
+$panel-red-heading-bg:                  $red;
+
+$panel-green-text:                      #fff;
+$panel-green-border:                    transparent;
+$panel-green-heading-bg:                $green;
+
+$panel-blue-text:                       #fff;
+$panel-blue-border:                     transparent;
+$panel-blue-heading-bg:                 $blue;
+
+$panel-cyan-text:                       #fff;
+$panel-cyan-border:                     transparent;
+$panel-cyan-heading-bg:                 $cyan;
+
+$panel-magenta-text:                    #fff;
+$panel-magenta-border:                  transparent;
+$panel-magenta-heading-bg:              $magenta;
+
+$panel-yellow-text:                     #fff;
+$panel-yellow-border:                   transparent;
+$panel-yellow-heading-bg:               $yellow;
+
+$panel-orange-text:                     #fff;
+$panel-orange-border:                   transparent;
+$panel-orange-heading-bg:               $orange;
+
+$panel-navy-text:                       #fff;
+$panel-navy-border:                     transparent;
+$panel-navy-heading-bg:                 $navy;
+
+$panel-silver-text:                     #fff;
+$panel-silver-border:                   transparent;
+$panel-silver-heading-bg:               $silver;
+
+
+//== List group
+//
+//##
+
+$list-group-border:             $border-color;
+
+//** Background color of single list items on hover
+$list-group-hover-bg:           $green;
+//** Text color of active list items
+$list-group-active-color:       $component-active-color !default;
+//** Background color of active list items
+$list-group-active-bg:          $component-active-bg !default;
+//** Border color of active list elements
+$list-group-active-border:      $list-group-active-bg !default;
+//** Text color for content within active list items
+$list-group-active-text-color:  lighten($list-group-active-bg, 40%) !default;
+
+//** Text color of disabled list items
+$list-group-disabled-color:      $gray-light !default;
+//** Background color of disabled list items
+$list-group-disabled-bg:         $gray-lighter !default;
+//** Text color for content within disabled list items
+$list-group-disabled-text-color: $list-group-disabled-color !default;
+
+$list-group-link-color:         $navy-tint-30;
+$list-group-link-hover-color:   #fff;
+$list-group-link-heading-color: #333 !default;
+
+
+//== Forms
+//
+//##
+
+//** `<input>` background color
+$input-bg:                       #fbfbfe;
+//** `<input disabled>` background color
+$input-bg-disabled:              $gray-lighter !default;
+
+//** Text color for `<input>`s
+$input-color:                    $gray !default;
+//** `<input>` border color
+$input-border:                   $border-color;
+
+// TODO: Rename `$input-border-radius` to `$input-border-radius-base` in v4
+//** Default `.form-control` border radius
+// This has no effect on `<select>`s in some browsers, due to the limited stylability of `<select>`s in CSS.
+$input-border-radius:            $border-radius-base !default;
+//** Large `.form-control` border radius
+$input-border-radius-large:      $border-radius-large !default;
+//** Small `.form-control` border radius
+$input-border-radius-small:      $border-radius-small !default;
+
+//** Border color for inputs on focus
+$input-border-focus:             $green;
+
+//** Placeholder text color
+$input-color-placeholder:        $silver;
+
+//** Default `.form-control` height
+$input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
+//** Large `.form-control` height
+$input-height-large:             (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2) !default;
+//** Small `.form-control` height
+$input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;
+
+$legend-color:                   $gray-dark !default;
+$legend-border-color:            #e5e5e5 !default;
+
+//** Background color for textual input addons
+$input-group-addon-bg:           $gray-lighter !default;
+//** Border color for textual input addons
+$input-group-addon-border-color: $input-border !default;
+
+//** Disabled cursor for form controls and buttons.
+$cursor-disabled:                not-allowed !default;
+
+/*
+================================================================================
+	cabbage end
+================================================================================
+*/
+
 $bootstrap-sass-asset-helper: false !default;
 //
 // Variables

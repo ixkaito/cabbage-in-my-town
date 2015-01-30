@@ -1,0 +1,29 @@
+header.navbar.navbar-static-top.cbg-header
+  .container
+    .row
+      .col-md-3
+        button.navbar-toggle.collapsed data-target=".bs-navbar-collapse" data-toggle="collapse" type="button"
+          span.sr-only
+            | Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        = link_to 'キャベツ', root_path, class: 'navbar-brand'
+      .col-md-6
+        .form-group.cbg-navbar-form
+          .input-group
+            .input-group-btn
+              .btn.btn-default
+                | 全国 &nbsp;
+                i.fa.fa-caret-down
+            = text_field_tag '', '', class: 'form-control'
+            .input-group-btn
+              .btn.btn-default
+                | 検索
+      .col-md-3.text-right
+        = link_to '#', class: 'btn btn-green navbar-btn'
+          i.fa.fa-sign-in
+          | &nbsp; ログイン
+        = link_to '#', class: 'btn btn-orange navbar-btn margin-left'
+          i.fa.fa-user-plus
+          | &nbsp; 無料会員登録
