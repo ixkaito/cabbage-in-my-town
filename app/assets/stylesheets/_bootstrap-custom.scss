@@ -1,6 +1,8 @@
 // Core variables and mixins
+@import "bootstrap/variables";
 @import "bootstrap-custom/variables";
 @import "bootstrap/mixins";
+@import "bootstrap-custom/mixins/buttons";
 
 // Reset and dependencies
 @import "bootstrap/normalize";
@@ -13,8 +15,8 @@
 @import "bootstrap/code";
 @import "bootstrap/grid";
 @import "bootstrap/tables";
-@import "bootstrap/forms";
-@import "bootstrap/buttons";
+@import "bootstrap-custom/forms";
+@import "bootstrap-custom/buttons";
 
 // Components
 @import "bootstrap/component-animations";
@@ -33,8 +35,8 @@
 @import "bootstrap/alerts";
 @import "bootstrap/progress-bars";
 @import "bootstrap/media";
-@import "bootstrap/list-group";
-@import "bootstrap/panels";
+@import "bootstrap-custom/list-group";
+@import "bootstrap-custom/panels";
 @import "bootstrap/responsive-embed";
 @import "bootstrap/wells";
 @import "bootstrap/close";

@@ -1,0 +1,13 @@
+p#notice
+  = notice
+p
+  strong
+    | Name:
+  = @shop.name
+p
+  strong
+    | Area:
+  = @shop.area
+= link_to 'Edit', edit_shop_path(@shop)
+|  | 
+= link_to 'Back', shops_path

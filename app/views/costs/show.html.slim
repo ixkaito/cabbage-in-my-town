@@ -1,0 +1,29 @@
+p#notice
+  = notice
+p
+  strong
+    | Price:
+  = @cost.price
+p
+  strong
+    | Unit:
+  = @cost.unit
+p
+  strong
+    | Quantity:
+  = @cost.quantity
+p
+  strong
+    | User:
+  = @cost.user
+p
+  strong
+    | Product:
+  = @cost.product
+p
+  strong
+    | Shop:
+  = @cost.shop
+= link_to 'Edit', edit_cost_path(@cost)
+|  | 
+= link_to 'Back', costs_path
