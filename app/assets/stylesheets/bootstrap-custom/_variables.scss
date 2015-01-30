@@ -51,10 +51,39 @@ $brand-info:            $yellow;
 $brand-warning:         $orange;
 $brand-danger:          $red;
 
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+$body-bg:               $cloud;
+//** Global text color on `<body>`.
+$text-color:            $navy-tint-30;
+
 //** Global textual link color.
 $link-color:            $brand-primary;
 //** Link hover color set via `darken()` function.
 $link-hover-color:      darken($link-color, 10%);
+//** Link hover decoration.
+$link-hover-decoration: underline !default;
+
+
+//== Components
+//
+//## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
+
+$border-radius-base:        960px;
+$border-radius-large:       $border-radius-base;
+$border-radius-small:       $border-radius-base;
+
+
+//== Tables
+//
+//## Customizes the `.table` component with basic values, each used across all table variations.
+
+
+$table-border-color:            $border-color;
 
 
 //== Buttons
@@ -213,11 +242,11 @@ $input-border:                   $border-color;
 // TODO: Rename `$input-border-radius` to `$input-border-radius-base` in v4
 //** Default `.form-control` border radius
 // This has no effect on `<select>`s in some browsers, due to the limited stylability of `<select>`s in CSS.
-$input-border-radius:            $border-radius-base !default;
+$input-border-radius:            $border-radius-base;
 //** Large `.form-control` border radius
-$input-border-radius-large:      $border-radius-large !default;
+$input-border-radius-large:      $border-radius-large;
 //** Small `.form-control` border radius
-$input-border-radius-small:      $border-radius-small !default;
+$input-border-radius-small:      $border-radius-small;
 
 //** Border color for inputs on focus
 $input-border-focus:             $green;
