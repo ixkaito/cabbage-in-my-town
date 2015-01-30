@@ -20,4 +20,164 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
-@import "common"
+.margin {
+	margin: $grid-gutter-width / 4;
+}
+
+.margin-top {
+	margin-top: $grid-gutter-width / 4;
+}
+
+.margin-right {
+	margin-right: $grid-gutter-width / 4;
+}
+
+.margin-bottom {
+	margin-bottom: $grid-gutter-width / 4;
+}
+
+.margin-left {
+	margin-left: $grid-gutter-width / 4;
+}
+
+/*
+================================================================================
+	Cabbage style
+================================================================================
+*/
+
+.cbg-header {
+	background: #fff;
+	margin-bottom: $grid-gutter-width;
+	border-top: 5px solid $green;
+	@include box-shadow(0 2px 1px darken($border-color, 5));
+}
+
+.cbg-header-logo {
+	height: 30px;
+}
+
+.cbg-navbar-form {
+	@include navbar-vertical-align($input-height-base);
+}
+
+.cbg-breadcrumb {
+	padding: 0;
+	margin-bottom: 0;
+	list-style: none;
+
+	li {
+		display: inline-block;
+
+		+ li:before {
+			content: "#{$breadcrumb-separator}\00a0"; // Unicode space added since inline-block means non-collapsing white-space
+			padding: 0 5px;
+			color: $breadcrumb-color;
+		}
+	}
+
+	> .active {
+	color: $breadcrumb-active-color;
+	}
+}
+
+.cbg-btn-group {
+	margin: -$grid-gutter-width / 8;
+
+	> .btn {
+		margin: $grid-gutter-width / 8;
+	}
+}
+
+.cbg-from-prefecture {
+	display: block;
+	margin: -20px;
+
+	> .cbg-from-prefecture-row {
+
+		> a,
+		> span {
+			color: $navy-tint-30;
+			display: inline-block;
+			text-align: center;
+			width: (1 / 6) * 100%;
+			height: 50px;
+			vertical-align: top;
+			padding: 15px 0;
+			border-bottom: 1px solid $border-color;
+
+			& + a,
+			& + span {
+				border-left: 1px solid $border-color;
+			}
+		}
+
+		&:last-child {
+
+			> a,
+			> span {
+				border-bottom: 0;
+			}
+		}
+
+		> a:hover {
+			background: $green;
+			color: #fff;
+			text-decoration: none;
+		}
+	}
+
+}
+
+.cbg-area-table {
+
+	> tbody {
+
+		> tr {
+
+			> th {
+				width: 1 / 6 * 100%;
+			}
+		}
+	}
+}
+
+.panel-body {
+
+	> .cbg-area-table {
+
+		> tbody {
+
+			> tr:first-child {
+
+				th,
+				td {
+					border-top: 0;
+				}
+			}
+		}
+	}
+}
+
+.cbg-area-list {
+	padding: 0;
+	margin-bottom: 0;
+	list-style: none;
+
+	> li {
+		display: inline-block;
+		width: 160px;
+
+		> a {
+			display: inline-block;
+			padding: 5px 20px;
+			@include border-radius(30px);
+
+			&:hover {
+				background: $brand-primary;
+				color: #fff;
+				text-decoration: none;
+			}
+		}
+	}
+}
