@@ -11,9 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150131033220) do
+ActiveRecord::Schema.define(version: 20150131060851) do
 
-  create_table "areas", force: :cascade do |t|
+  create_table "cities", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "prefecture_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "kana"
+  end
+
+  add_index "cities", ["prefecture_id"], name: "index_cities_on_prefecture_id"
+
+  create_table "prefectures", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -35,10 +45,6 @@ ActiveRecord::Schema.define(version: 20150131033220) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
-  add_index "costs", ["product_id"], name: "index_costs_on_product_id"
-  add_index "costs", ["shop_id"], name: "index_costs_on_shop_id"
-  add_index "costs", ["user_id"], name: "index_costs_on_user_id"
 
   create_table "prices", force: :cascade do |t|
     t.integer  "unit_price"
@@ -72,6 +78,17 @@ ActiveRecord::Schema.define(version: 20150131033220) do
   end
 
   add_index "shops", ["area_id"], name: "index_shops_on_area_id"
+
+  create_table "towns", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "city_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "postal_code"
+    t.string   "kana"
+  end
+
+  add_index "towns", ["city_id"], name: "index_towns_on_city_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
