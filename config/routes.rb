@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :prices
+
   root 'home#index'
 
   resources :costs
