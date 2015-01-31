@@ -10,7 +10,11 @@ Rails.application.routes.draw do
 
   resources :shops
 
-  resources :areas
+  resources :prefectures do
+    resources :cities do
+      resources :towns
+    end
+  end
 
   resources :users
 
