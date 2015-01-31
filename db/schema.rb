@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150131033220) do
-=======
-ActiveRecord::Schema.define(version: 20150131012852) do
->>>>>>> master
 
   create_table "areas", force: :cascade do |t|
     t.string   "name"
@@ -51,19 +47,6 @@ ActiveRecord::Schema.define(version: 20150131012852) do
     t.integer  "user_id"
     t.integer  "product_id"
     t.integer  "shop_id"
-<<<<<<< HEAD
-=======
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "prices", ["product_id"], name: "index_prices_on_product_id"
-  add_index "prices", ["shop_id"], name: "index_prices_on_shop_id"
-  add_index "prices", ["user_id"], name: "index_prices_on_user_id"
-
-  create_table "products", force: :cascade do |t|
-    t.string   "name"
->>>>>>> master
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
