@@ -12,7 +12,9 @@ Rails.application.routes.draw do
 
   resources :prefectures do
     resources :cities do
-      resources :towns
+      resources :towns do
+        get '/categories', to: 'categories#index'
+      end
     end
   end
 

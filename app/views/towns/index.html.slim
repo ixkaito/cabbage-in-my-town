@@ -10,10 +10,13 @@
           li.active
             |
             = @prefecture.name
+          li.active
+            |
+            = @city.name
       .panel-body
         table.table.cbg-area-table
           tbody
-            - kana_list.each do |kana, cities|
+            - kana_list.each do |kana, towns|
               tr
                 th
                   |
@@ -21,9 +24,9 @@
                   = "行"
                 td
                   ul.cbg-area-list
-                    - cities.each do |city|
+                    - towns.each do |town|
                       li
-                        = link_to city.name, prefecture_city_towns_path(@prefecture, city.id)
+                        = link_to town.name, prefecture_city_town_categories_path(@prefecture, @city, town.id)
 
 
 / p#notice
