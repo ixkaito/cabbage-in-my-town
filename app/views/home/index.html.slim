@@ -37,61 +37,14 @@
       .panel-body
         .cbg-from-prefecture
           .cbg-from-prefecture-row
-            = link_to '北海道', '#'
-            = link_to '北海道', '#'
-            = link_to '北海道', '#'
-            = link_to '北海道', '#'
-            = link_to '北海道', '#'
-            = link_to '北海道', '#'
-          .cbg-from-prefecture-row
-            = link_to '北海道', '#'
-            = link_to '北海道', '#'
-            = link_to '北海道', '#'
-            = link_to '北海道', '#'
-            = link_to '北海道', '#'
-            = link_to '北海道', '#'
-          .cbg-from-prefecture-row
-            = link_to '北海道', '#'
-            = link_to '北海道', '#'
-            = link_to '北海道', '#'
-            = link_to '北海道', '#'
-            = link_to '北海道', '#'
-            = link_to '北海道', '#'
-          .cbg-from-prefecture-row
-            = link_to '北海道', '#'
-            = link_to '北海道', '#'
-            = link_to '北海道', '#'
-            = link_to '北海道', '#'
-            = link_to '北海道', '#'
-            = link_to '北海道', '#'
-          .cbg-from-prefecture-row
-            = link_to '北海道', '#'
-            = link_to '北海道', '#'
-            = link_to '北海道', '#'
-            = link_to '北海道', '#'
-            = link_to '北海道', '#'
-            = link_to '北海道', '#'
-          .cbg-from-prefecture-row
-            = link_to '北海道', '#'
-            = link_to '北海道', '#'
-            = link_to '北海道', '#'
-            = link_to '北海道', '#'
-            = link_to '北海道', '#'
-            = link_to '北海道', '#'
-          .cbg-from-prefecture-row
-            = link_to '北海道', '#'
-            = link_to '北海道', '#'
-            = link_to '北海道', '#'
-            = link_to '北海道', '#'
-            = link_to '北海道', '#'
-            = link_to '北海道', '#'
-          .cbg-from-prefecture-row
-            = link_to '北海道', '#'
-            = link_to '北海道', '#'
-            = link_to '北海道', '#'
-            = link_to '北海道', '#'
-            = link_to '北海道', '#'
-            span
+            - n = 0
+            - @prefectures.each do |prefecture|
+              - n = n == 6 ? 0 : n
+              - if n == 0
+                .cbg-from-prefecture-row
+              = link_to prefecture.name, prefecture_cities_path(prefecture.id)
+              - n += 1
+          span
   .col-md-3
     .panel.panel-default
       .panel-heading
