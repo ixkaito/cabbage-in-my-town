@@ -1,0 +1,31 @@
+.row
+  .col-md-12
+    .panel.panel-default
+      .panel-heading
+        ol.cbg-breadcrumb
+          li
+            = link_to root_path, class: 'fa-stack fa-lg'
+              i.fa.fa-circle.fa-stack-2x
+              i.fa.fa-stack-1x.fa-inverse.fa-home
+          li
+            = link_to '大阪府', '#'
+          li
+            = link_to '大阪市西淀川区', '#'
+          li.active
+            = link_to '御幣島１丁目', '#'
+          li.active
+            = @category.name
+    ul.cbg-product-list
+      - @products.each do |product|
+        li
+          = link_to @product.name, '#'
+
+/ p#notice = notice
+
+/ p
+/   strong Name:
+/   = @category.name
+
+/ = link_to 'Edit', edit_category_path(@category)
+/ '|
+/ = link_to 'Back', categories_path
