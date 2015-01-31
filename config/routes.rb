@@ -4,8 +4,6 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
-  resources :costs
-
   resources :products
 
   resources :shops
