@@ -13,6 +13,12 @@
 
 ActiveRecord::Schema.define(version: 20150131060851) do
 
+  create_table "categories", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "cities", force: :cascade do |t|
     t.string   "name"
     t.integer  "prefecture_id"
@@ -25,23 +31,6 @@ ActiveRecord::Schema.define(version: 20150131060851) do
 
   create_table "prefectures", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "categories", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "costs", force: :cascade do |t|
-    t.integer  "price"
-    t.string   "unit"
-    t.integer  "quantity"
-    t.integer  "user_id"
-    t.integer  "product_id"
-    t.integer  "shop_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
