@@ -65,6 +65,12 @@ class PricesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_price
       @price = Price.find(params[:id])
+      @prefecture = Prefecture.find(params[:prefecture_id])
+      @city = City.find(params[:city_id])
+      @town = Town.find(params[:town_id])
+      @shop = Shop.find(params[:shop_id])
+      @category = Category.find(params[:category_id])
+      @product = Product.find(params[:product_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
