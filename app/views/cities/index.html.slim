@@ -1,0 +1,51 @@
+.row
+  .col-md-12
+    .panel.panel-default
+      .panel-heading
+        ol.cbg-breadcrumb
+          li
+            = link_to root_path, class: 'fa-stack fa-lg'
+              i.fa.fa-circle.fa-stack-2x
+              i.fa.fa-stack-1x.fa-inverse.fa-home
+          li.active
+            |
+            = @prefecture.name
+      .panel-body
+        table.table.cbg-area-table
+          tbody
+            - kana_list.each do |kana, cities|
+              tr
+                th
+                  |
+                  = kana
+                  = "行"
+                td
+                  ul.cbg-area-list
+                    - cities.each do |city|
+                      li
+                        = link_to city.name, "#"
+
+
+/ p#notice
+/   = notice
+/ h1
+/   | Listing Areas
+/ table
+/   thead
+/     tr
+/       th
+/         | Name
+/       th[colspan="3"]
+/   tbody
+/     - @areas.each do |area|
+/       tr
+/         td
+/           = area.name
+/         td
+/           = link_to 'Show', area
+/         td
+/           = link_to 'Edit', edit_area_path(area)
+/         td
+/           = link_to 'Destroy', area, method: :delete, data: { confirm: 'Are you sure?' }
+/ br
+/ = link_to 'New Area', new_area_path
