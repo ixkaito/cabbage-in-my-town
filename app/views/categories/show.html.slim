@@ -7,18 +7,12 @@
             = link_to root_path, class: 'fa-stack fa-lg'
               i.fa.fa-circle.fa-stack-2x
               i.fa.fa-stack-1x.fa-inverse.fa-home
-          li
-            = link_to '大阪府', '#'
-          li
-            = link_to '大阪市西淀川区', '#'
-          li.active
-            = link_to '御幣島１丁目', '#'
           li.active
             = @category.name
     ul.cbg-product-list
       - @products.each do |product|
         li
-          = link_to @product.name, '#'
+          = link_to product.name, product_path
 
 / p#notice = notice
 
