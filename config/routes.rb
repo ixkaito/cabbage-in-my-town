@@ -2,11 +2,12 @@ Rails.application.routes.draw do
 
   resources :categories
 
-  resources :prices
 
   root 'home#index'
 
-  resources :products
+  resources :products do
+    resources :prices
+  end
 
   resources :shops
 
