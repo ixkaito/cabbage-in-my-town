@@ -1,0 +1,23 @@
+.row
+  .col-md-12
+    .panel.panel-default
+      .panel-heading
+        ol.cbg-breadcrumb
+          li
+            = link_to root_path, class: 'fa-stack fa-lg'
+              i.fa.fa-circle.fa-stack-2x
+              i.fa.fa-stack-1x.fa-inverse.fa-home
+          li.active
+            | 商品カテゴリー一覧
+      .panel-body
+        table.table.cbg-category-table
+          tbody
+            - @categories.each do |category|
+              tr
+                th
+                  = category.name
+                td
+                  ul.cbg-category-list
+                    - @products.where(category_id: category).each do |product|
+                      li
+                        = link_to product.name, product
