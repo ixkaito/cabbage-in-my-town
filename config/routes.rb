@@ -6,14 +6,22 @@ Rails.application.routes.draw do
 
   root 'home#index'
 
-  resources :products
+  resources :products do
+    resources :prices
+  end
 
   resources :shops
 
   resources :prefectures do
     resources :cities do
       resources :towns do
-        get '/categories', to: 'categories#index'
+        resources :shops do
+          resources :categories do
+            resources :products do
+              resources :prices
+            end
+          end
+        end
       end
     end
   end

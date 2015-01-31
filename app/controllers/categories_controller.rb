@@ -6,6 +6,9 @@ class CategoriesController < ApplicationController
   def index
     @categories = Category.all
     @products = Product.all
+    @prefecture = Prefecture.find(params[:prefecture_id])
+    @city = City.find(params[:city_id])
+    @town = Town.find(params[:town_id])
   end
 
   # GET /categories/1

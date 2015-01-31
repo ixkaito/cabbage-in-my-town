@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150131060851) do
+ActiveRecord::Schema.define(version: 20150131104515) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -61,12 +61,16 @@ ActiveRecord::Schema.define(version: 20150131060851) do
 
   create_table "shops", force: :cascade do |t|
     t.string   "name"
-    t.integer  "area_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "prefecture_id"
+    t.integer  "city_id"
+    t.integer  "town_id"
   end
 
-  add_index "shops", ["area_id"], name: "index_shops_on_area_id"
+  add_index "shops", ["city_id"], name: "index_shops_on_city_id"
+  add_index "shops", ["prefecture_id"], name: "index_shops_on_prefecture_id"
+  add_index "shops", ["town_id"], name: "index_shops_on_town_id"
 
   create_table "towns", force: :cascade do |t|
     t.string   "name"

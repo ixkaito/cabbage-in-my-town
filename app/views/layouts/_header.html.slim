@@ -21,18 +21,18 @@ header.navbar.navbar-static-top.cbg-header
               .btn.btn-default
                 | 検索
       .col-md-3.text-right
-		- if user_signed_in?
-          = link_to destroy_user_session_path, method: :delete, class: 'btn btn-orange navbar-btn'
+        - if user_signed_in?
+          = link_to destroy_user_session_path, method: :delete, class: 'btn btn-silver navbar-btn'
             i.fa.fa-sign_out
-            | &nbsp; ログアウト 
-          = link_to registration_path(current_user), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn btn-orange navbar-btn margin-left'
-            i.fa.fa-user_delete
-            | &nbsp; 退会 
-		- else
+            | &nbsp; ログアウト
+          / = link_to registration_path(current_user), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn btn-orange navbar-btn margin-left'
+          /   i.fa.fa-user_delete
+          /   | &nbsp; 退会
+        - else
           = link_to new_user_session_path, class: 'btn btn-green navbar-btn'
             i.fa.fa-sign-in
             | &nbsp; ログイン
           = link_to new_user_registration_path, class: 'btn btn-orange navbar-btn margin-left'
             i.fa.fa-user-plus
             | &nbsp; 無料会員登録
-		
+

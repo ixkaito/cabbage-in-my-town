@@ -15,6 +15,9 @@ class ShopsController < ApplicationController
   # GET /shops/new
   def new
     @shop = Shop.new
+    @prefectures = Prefecture.all
+    @cities = City.all
+    @towns = Town.all
   end
 
   # GET /shops/1/edit

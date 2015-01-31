@@ -20,4 +20,4 @@
                   ul.cbg-category-list
                     - @products.where(category_id: category).each do |product|
                       li
-                        = link_to product.name, product
+                        = link_to product.name, prefecture_city_town_category_product_path(@prefecture, @city, @town, category.id, product.id)

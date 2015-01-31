@@ -1,4 +1,4 @@
-= form_for(@shop) do |f|
+= form_for @shop, html: {class: 'form-horizontal'} do |f|
   - if @shop.errors.any?
     #error_explanation
       h2
@@ -8,13 +8,23 @@
         - @shop.errors.full_messages.each do |message|
           li
             = message
-  .field
-    = f.label :name
-    br
-    = f.text_field :name
-  .field
-    = f.label :area_id
-    br
-    = f.text_field :area_id
-  .actions
-    = f.submit
+
+  .form-group
+    = f.label :name, class: 'col-sm-3 control-label'
+    .col-sm-7
+      = f.text_field :name, class: 'form-control'
+  .form-group
+    = f.label :prefecture_id, class: 'col-sm-3 control-label'
+    .col-sm-7
+      = f.collection_select(:prefecture_id, @prefectures, :id, :name, {prompt: '選択してください'}, {class: 'form-control'})
+  .form-group
+    = f.label :city_id, class: 'col-sm-3 control-label'
+    .col-sm-7
+      = f.collection_select(:city_id, @cities, :id, :name, {prompt: '選択してください'}, {class: 'form-control'})
+  .form-group
+    = f.label :town_id, class: 'col-sm-3 control-label'
+    .col-sm-7
+      = f.collection_select(:town_id, @towns, :id, :name, {prompt: '選択してください'}, {class: 'form-control'})
+  .form-group
+    .col-sm-7.col-sm-offset-3
+      = f.submit class: 'btn btn-green'

@@ -1,0 +1,40 @@
+.row
+  .col-md-6.col-md-offset-3
+    .panel.panel-default
+      .panel-heading
+        .panel-title
+          | 無料会員登録
+      .panel-body
+        = form_for(resource, as: resource_name, url: registration_path(resource_name), html: {class: 'form-horizontal'}) do |f|
+          = devise_error_messages!
+
+          .form-group
+            = f.label :name, class: 'col-sm-3 control-label'
+            .col-sm-7
+              = f.text_field :name, autofocus: true, class: 'form-control'
+          .form-group
+            = f.label :email, class: 'col-sm-3 control-label'
+            .col-sm-7
+              = f.email_field :email, class: 'form-control'
+
+          .form-group
+            = f.label :password, class: 'col-sm-3 control-label'
+            .col-sm-7
+              = f.password_field :password, autocomplete: "off", class: 'form-control'
+              - if @validatable
+                em
+                  | (
+                  = @minimum_password_length
+                  | characters minimum)
+
+          .form-group
+            = f.label :password_confirmation, class: 'col-sm-3 control-label'
+            .col-sm-7
+              = f.password_field :password_confirmation, autocomplete: "off", class: 'form-control'
+
+          .form-group
+            .col-sm-7.col-sm-offset-3
+              = f.submit class: 'btn btn-green'
+          .row
+            .col-sm-7.col-sm-offset-3
+              = render "devise/shared/links"
