@@ -8,15 +8,10 @@
             i.fa.fa-stack-1x.fa-inverse.fa-shopping-cart
           | &nbsp; 商品カテゴリー
       .list-group
-        = link_to '野菜', '#', class: 'list-group-item'
-        = link_to '野菜', '#', class: 'list-group-item'
-        = link_to '野菜', '#', class: 'list-group-item'
-        = link_to '野菜', '#', class: 'list-group-item'
-        = link_to '野菜', '#', class: 'list-group-item'
-        = link_to '野菜', '#', class: 'list-group-item'
-        = link_to '野菜', '#', class: 'list-group-item'
+        - @categories.each do |category|
+          = link_to category.name, category_path(category), class: 'list-group-item'
       .panel-footer.text-right
-        = link_to 'すべてのカテゴリー', '#'
+        = link_to 'すべてのカテゴリー', categories_path
   .col-md-6
     .panel.panel-default
       .panel-heading

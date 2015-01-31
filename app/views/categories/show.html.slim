@@ -7,6 +7,8 @@
             = link_to root_path, class: 'fa-stack fa-lg'
               i.fa.fa-circle.fa-stack-2x
               i.fa.fa-stack-1x.fa-inverse.fa-home
+          li
+            = link_to '商品カテゴリー一覧', categories_path
           li.active
             = @category.name
     ul.cbg-product-list

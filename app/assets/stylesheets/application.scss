@@ -144,6 +144,7 @@
 
 .panel-body {
 
+	> .cbg-category-table,
 	> .cbg-area-table {
 
 		> tbody {
@@ -159,6 +160,7 @@
 	}
 }
 
+.cbg-category-list,
 .cbg-area-list {
 	padding: 0;
 	margin-bottom: 0;

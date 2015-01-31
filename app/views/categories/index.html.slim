@@ -7,62 +7,17 @@
             = link_to root_path, class: 'fa-stack fa-lg'
               i.fa.fa-circle.fa-stack-2x
               i.fa.fa-stack-1x.fa-inverse.fa-home
-          li
-            = link_to '大阪府', '#'
-          li
-            = link_to '大阪市西淀川区', '#'
           li.active
-            | 御幣島１丁目
-
-    ul.cbg-product-list
-      li
-        = link_to '野菜', '#'
-      li
-        = link_to '野菜', '#'
-      li
-        = link_to '野菜', '#'
-      li
-        = link_to '野菜', '#'
-      li
-        = link_to '野菜', '#'
-      li
-        = link_to '野菜', '#'
-      li
-        = link_to '野菜', '#'
-      li
-        = link_to '野菜', '#'
-      li
-        = link_to '野菜', '#'
-      li
-        = link_to '野菜', '#'
-      li
-        = link_to '野菜', '#'
-      li
-        = link_to '野菜', '#'
-      li
-        = link_to '野菜', '#'
-      li
-        = link_to '野菜', '#'
-
-
-/ h1 Listing categories
-
-/ table
-/   thead
-/     tr
-/       th Name
-/       th
-/       th
-/       th
-
-/   tbody
-/     - @categories.each do |category|
-/       tr
-/         td = category.name
-/         td = link_to 'Show', category
-/         td = link_to 'Edit', edit_category_path(category)
-/         td = link_to 'Destroy', category, data: {:confirm => 'Are you sure?'}, :method => :delete
-
-/ br
-
-/ = link_to 'New Category', new_category_path
+            | 商品カテゴリー一覧
+      .panel-body
+        table.table.cbg-category-table
+          tbody
+            - @categories.each do |category|
+              tr
+                th
+                  = category.name
+                td
+                  ul.cbg-category-list
+                    - @products.where(category_id: category).each do |product|
+                      li
+                        = link_to product.name, product
